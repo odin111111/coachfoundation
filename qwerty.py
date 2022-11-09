@@ -24,7 +24,7 @@ def botInitialization(headless=False):
     if headless:
         options.add_argument("--headless")
     driver = webdriver.Chrome(
-        service=Service(ChromeDriverManager().install()), options=options
+        executable_path='chromedriver', options=options
     )
     driver.maximize_window()
     driver.implicitly_wait(1)
